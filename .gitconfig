@@ -9,12 +9,6 @@
     email = herve.guigoz@gmail.com
     name = herveGuigoz
 
-[tag]
-    gpgsign = true
-
-[commit]
-    gpgsign = true
-
 [color]
     # Enable colors for all output from git
     # Useful when you have to view diffs or status
