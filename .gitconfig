@@ -19,6 +19,8 @@
     default = current
 
 [core]
+    editor = vim
+    
     # Automatically adds the user-related .gitignore file globally
     # Remember to add default files to the global .gitignore !
     # Some like thumbs.db (win), .DS_STORE (Mac) or IDE likes: .nbproject, .idea, .xcodeproj, etc.
@@ -43,11 +45,32 @@
     # Shortcuts for some actions
     co = checkout
     cob = checkout -b
-    cm = commit
-    cma = commit --amend
+    c = commit
+    co = commit --amend
+    cam = commit -am
+    br = branch
     l = log
     st = status
-
+    
+    # Push head.
+    pushead = !git push origin HEAD
+    p = !git pushead
+    pf = !git pushead -f
+    
+    # Add fix.
+    fix = !git add --all && git commit -am "Fix." && git pushead
+	f = !git fix
+    
+    # Fix last commit.
+	fixup = !git add --all && git commit --amend -C HEAD
+	fixnow = !git fixup && git pushead -f
+	fu = !git fixup
+	fn = !git fixnow
+    
+    # Clean merged branch.
+	deletedone = !git branch --merged | grep -v \"\\*\" | grep -v master | xargs -n 1 git branch -d
+	dd = !git deletedone
+    
     # Tools to save time
     f = fetch --all            # Fetches all your repositories
     fp = fetch --all --prune   # Fetches all your repositories and removes refs that do not exist anymore remotely
@@ -56,6 +79,7 @@
     r = remote -v              # List all remotes and show their urls.
     undo = reset --soft HEAD~1 # Removes the last commit, but don't erase all modifications
     rbc = rebase --continue    # Continue rebasing (mostly after fixing conflicts).
+    up = !git pull --rebase --prune $@ && git submodule update --init --recursive # Get working directory up to date.
 
     # List all tags with their author and date of release (better than "git tag -l")
     # Two different methods because the rendered tags are not the same.
@@ -82,3 +106,10 @@
     # With this command, git automatically removes any orphan blob in the .git/ directory.
     # Tested and approved! For a very often rebased repo, turned it from 4.8GB to 350MB... 😉
     gcall = -c gc.reflogExpire=0 -c gc.reflogExpireUnreachable=0 -c gc.rerereresolved=0 -c gc.rerereunresolved=0 -c gc.pruneExpire=now gc --aggressive
+    
+    # Stash.
+	sc = !git stash clear
+	sl = !git stash list --pretty=format:'%Cred%h%Creset -%C(yellow)(%C(bold magenta)%gd%C(yellow))%Creset %<(70,trunc)%s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+	
+	# Show aliases.
+	aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
