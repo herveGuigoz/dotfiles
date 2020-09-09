@@ -59,7 +59,7 @@
     
     # Add fix.
     fix = !git add --all && git commit -am "Fix." && git pushead
-	f = !git fix
+    f = !git fix
     
     # Fix last commit.
     fixup = !git add --all && git commit --amend -C HEAD
