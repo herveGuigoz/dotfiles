@@ -62,14 +62,18 @@
 	f = !git fix
     
     # Fix last commit.
-	fixup = !git add --all && git commit --amend -C HEAD
-	fixnow = !git fixup && git pushead -f
-	fu = !git fixup
-	fn = !git fixnow
+    fixup = !git add --all && git commit --amend -C HEAD
+    fixnow = !git fixup && git pushead -f
+    fu = !git fixup
+    fn = !git fixnow
     
     # Clean merged branch.
-	deletedone = !git branch --merged | grep -v \"\\*\" | grep -v master | xargs -n 1 git branch -d
-	dd = !git deletedone
+    deletedone = !git branch --merged | grep -v \"\\*\" | grep -v master | xargs -n 1 git branch -d
+    dd = !git deletedone
+    
+    # Stash.
+    sc = !git stash clear
+    sl = !git stash list --pretty=format:'%Cred%h%Creset -%C(yellow)(%C(bold magenta)%gd%C(yellow))%Creset %<(70,trunc)%s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
     
     # Tools to save time
     f = fetch --all            # Fetches all your repositories
@@ -106,10 +110,6 @@
     # With this command, git automatically removes any orphan blob in the .git/ directory.
     # Tested and approved! For a very often rebased repo, turned it from 4.8GB to 350MB... 😉
     gcall = -c gc.reflogExpire=0 -c gc.reflogExpireUnreachable=0 -c gc.rerereresolved=0 -c gc.rerereunresolved=0 -c gc.pruneExpire=now gc --aggressive
-    
-    # Stash.
-	sc = !git stash clear
-	sl = !git stash list --pretty=format:'%Cred%h%Creset -%C(yellow)(%C(bold magenta)%gd%C(yellow))%Creset %<(70,trunc)%s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
-	
-	# Show aliases.
-	aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
+        
+    # Show aliases.
+    aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
