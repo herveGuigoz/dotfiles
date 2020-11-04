@@ -15,26 +15,6 @@ brew cask install iterm2
 brew install zsh-autosuggestions
 sed -i -e 's/plugins=(git)/plugins=(git zsh-autosuggestions flutter alias-finder docker)/g' ~/.zshrc
 
-# Aliases
-echo '# zsh' >>~/.zshrc
-echo "alias zshconfig='vim ~/.zshrc'" >>~/.zshrc
-echo "alias sourcezsh='source ~/.zshrc'" >>~/.zshrc
-echo "# Common" >>~/.zshrc
-echo "alias c='clear'" >>~/.zshrc
-echo "# Git" >>~/.zshrc
-echo "alias glh='git pull origin HEAD'" >>~/.zshrc
-echo '# Prevent common error' >>~/.zshrc
-echo "alias gti='git'" >>~/.zshrc
-echo "# Docker compose" >>~/.zshrc
-echo "alias dc='docker-compose'" >>~/.zshrc
-echo "alias dcrmc='docker-compose exec php bin/console c:c'" >>~/.zshrc
-echo "alias rmc='rm -rf var/cache'" >>~/.zshrc
-echo '# Aliase' >>~/.zshrc
-echo "alias al='alias'" >>~/.zshrc
-echo "alias af='alias-finder'" >>~/.zshrc
-
-source ~/.zshrc
-
 # Dev tools
 brew install node
 brew install yarn

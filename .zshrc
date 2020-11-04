@@ -68,7 +68,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions flutter alias-finder docker thefuck)
+plugins=(git zsh-autosuggestions flutter alias-finder docker)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -93,7 +93,7 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
+
 # zsh
 alias zshconfig="vim ~/.zshrc"
 alias sourcezsh="source ~/.zshrc"
@@ -103,9 +103,6 @@ alias ip='ipconfig getifaddr en0'
 
 # Common
 alias c="clear"
-
-# Git
-alias glh="git pull origin HEAD"
 
 # Prevent common error
 alias gti="git"
@@ -118,8 +115,6 @@ alias rmc="rm -rf var/cache"
 # Aliases
 alias al="alias"
 alias af="alias-finder"
-
-eval $(thefuck --alias)
 
 # Use flutter Everywhere
 export PATH="$PATH:`pwd`/flutter/bin"
