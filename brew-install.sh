@@ -9,7 +9,7 @@ echo "Install git"
 brew install git
 
 # terminal
-echo "Upgrade terminal"
+echo "Install terminal stuff"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 brew cask install iterm2
 
@@ -20,4 +20,6 @@ brew install composer
 brew cask install docker
 
 # Other
+brew cask install brave-browser
 brew cask install microsoft-teams
+brew cask install insomnia
