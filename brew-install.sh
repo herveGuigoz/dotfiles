@@ -23,3 +23,4 @@ brew cask install docker
 brew cask install brave-browser
 brew cask install microsoft-teams
 brew cask install insomnia
+brew cask install keepassxc
