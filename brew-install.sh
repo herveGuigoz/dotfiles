@@ -4,16 +4,20 @@ echo "Install home brew"
 echo "Install brew cask"
 brew tap homebrew/cask
 
+# git
 echo "Install git"
 brew install git
 
-echo "Install oh my zsh"
+# terminal
+echo "Upgrade terminal"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+brew cask install iterm2
 
 # Dev tools
-echo "Install dev tools..."
+brew install node
+brew install yarn
+brew install composer
+brew cask install docker
 
-brew cask install iterm2
-brew install docker
-
-
+# Other
+brew cask install microsoft-teams
