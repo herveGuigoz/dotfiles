@@ -40,6 +40,8 @@ brew install node
 brew install yarn
 brew install composer
 brew cask install docker
+brew cask install android-studio
+brew cask install visual-studio-code
 
 # Misc
 brew cask install brave-browser
