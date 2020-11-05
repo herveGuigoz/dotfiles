@@ -22,12 +22,14 @@ brew install composer
 brew cask install docker
 brew tap dart-lang/dart
 brew install dart
+brew cask install android-platform-tools
 
 brew cask install android-studio
 brew cask install visual-studio-code
 brew cask install insomnia
 
 # Misc
+brew install scrcpy
 brew cask install brave-browser
 brew cask install keepassxc
 brew cask install appcleaner
