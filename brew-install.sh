@@ -4,11 +4,11 @@ echo "Install home brew"
 echo "Install brew cask"
 brew tap homebrew/cask
 
-# git
+# Git
 echo "Install git"
 brew install git
 
-# terminal
+# Terminal
 echo "Install terminal stuff"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 brew cask install iterm2
@@ -20,12 +20,14 @@ brew install node
 brew install yarn
 brew install composer
 brew cask install docker
+brew tap dart-lang/dart
+brew install dart
+
 brew cask install android-studio
 brew cask install visual-studio-code
+brew cask install insomnia
 
 # Misc
 brew cask install brave-browser
-brew cask install microsoft-teams
-brew cask install insomnia
 brew cask install keepassxc
 brew cask install appcleaner
