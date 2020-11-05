@@ -33,3 +33,5 @@ brew install scrcpy
 brew cask install brave-browser
 brew cask install keepassxc
 brew cask install appcleaner
+brew cask install windscribe
+brew cask install lulu
