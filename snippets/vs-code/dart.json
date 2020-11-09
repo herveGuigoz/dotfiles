@@ -1,1 +1,9 @@
-{}
+{
+  "Material route": {
+		"prefix": "route",
+		"body": [
+			"static Route route() {", "return MaterialPageRoute<void>(builder: (_) => ${0:element}());","}",
+		],
+		"description": "Create static methode for matérial route"
+	}
+}
