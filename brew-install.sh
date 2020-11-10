@@ -37,3 +37,5 @@ brew cask install windscribe
 brew cask install lulu
 brew cask install inkscape
 brew cask install discord
+# https://github.com/sveinbjornt/Sloth
+brew cask install sloth
