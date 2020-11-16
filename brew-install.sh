@@ -21,7 +21,8 @@ brew install yarn
 brew install composer
 brew cask install docker
 brew tap dart-lang/dart
-brew cask install flutter
+brew install dart
+pub global activate fvm
 brew cask install android-platform-tools
 
 brew cask install android-studio
