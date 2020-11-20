@@ -106,6 +106,7 @@ alias c="clear"
 
 # Prevent common error
 alias gti="git"
+alias ct='cat ~/dotfiles/git/commit_types'
 
 # Docker compose
 alias dc="docker-compose"
