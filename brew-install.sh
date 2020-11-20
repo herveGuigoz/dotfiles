@@ -39,5 +39,6 @@ brew cask install windscribe
 brew cask install lulu
 brew cask install inkscape
 brew cask install discord
+brew install wifi-password
 # brew cask install sloth # https://github.com/sveinbjornt/Sloth
 
