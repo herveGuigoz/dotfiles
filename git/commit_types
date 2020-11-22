@@ -1,12 +1,12 @@
-feat: A new feature
-fix: A bug fix
-docs: Documentation only changes
-style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
-refactor: A code change that neither fixes a bug nor adds a feature
-perf: A code change that improves performance
-test: Adding tests or correcting existing tests
-bump: Version update
-build: Changes that affect the build system or external dependencies (flutter, dart, riverpod, etc..)
-ci: Changes to our CI configuration files and scripts
-localize: Translations update
-revert: Reverts a previous commit
+FEAT: A new feature
+FIX: A bug fix
+DOCS: Documentation only changes
+STYLE: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+REFACTOR: A code change that neither fixes a bug nor adds a feature
+PERF: A code change that improves performance
+TEST: Adding tests or correcting existing tests
+BUMP: Version update
+BUILD: Changes that affect the build system or external dependencies (flutter, dart, riverpod, etc..)
+CI: Changes to our CI configuration files and scripts
+LOCALIZE: Translations update
+REVERT: Reverts a previous commit

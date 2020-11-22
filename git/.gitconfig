@@ -107,6 +107,21 @@
     	# With this command, git automatically removes any orphan blob in the .git/ directory.
     	# Tested and approved! For a very often rebased repo, turned it from 4.8GB to 350MB... 😉
     	gcall = -c gc.reflogExpire=0 -c gc.reflogExpireUnreachable=0 -c gc.rerereresolved=0 -c gc.rerereunresolved=0 -c gc.pruneExpire=now gc --aggressive
-        
+      
+			# NEW.
+			new = "!f() { git commit -m \"📦 NEW: $@\"; }; f"
+			# IMPROVE.
+			imp = "!f() { git commit -m \"👌 IMPROVE: $@\"; }; f"
+			# FIX.
+			fix = "!f() { git commit -m \"🐛 FIX: $@\"; }; f"
+			# RELEASE.
+			rlz = "!f() { git commit -m \"🚀 RELEASE: $@\"; }; f"
+			# DOC.
+			doc = "!f() { git commit -m \"📖 DOC: $@\"; }; f"
+			# TEST.
+			tst = "!f() { git commit -m \"🤖 TEST: $@\"; }; f"
+			# BREAKING CHANGE.
+			brk = "!f() { git commit -m \"‼️ BREAKING: $@\"; }; f"
+
     	# Show aliases.
     	alias = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
