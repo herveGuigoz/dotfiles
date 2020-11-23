@@ -108,30 +108,30 @@
     	# Tested and approved! For a very often rebased repo, turned it from 4.8GB to 350MB... 😉
     	gcall = -c gc.reflogExpire=0 -c gc.reflogExpireUnreachable=0 -c gc.rerereresolved=0 -c gc.rerereunresolved=0 -c gc.pruneExpire=now gc --aggressive
       
-			# FEAT.
-			feat = "!f() { git commit -m \"✨ FEAT: $@\"; }; f"
-			# FIX.
-			fx = "!f() { git commit -m \"👌 FIX: $@\"; }; f"
-			# DOCS.
-			doc = "!f() { git commit -m \"📖 DOCS: $@\"; }; f"
-			# STYLE
-			style = "!f() { git commit -m \"💄 STYLE: $@\"; }; f"
-			# REFACTOR
-			refactor = "!f() { git commit -m \"🔥 REFACTOR: $@\"; }; f"
-			# PERF
-			perf = "!f() { git commit -m \"📈 PERF: $@\"; }; f"
-			# TEST
-			tst = "!f() { git commit -m \"✅ TEST: $@\"; }; f"
-			# BUILD
-			build = "!f() { git commit -m \"📦 BUILD: $@\"; }; f"
-			# CI
-			ci = "!f() { git commit -m \"💚 CI: $@\"; }; f"
-			# LOCALIZE
-			localize = "!f() { git commit -m \"👽 LOCALIZE: $@\"; }; f"
-			# REVERT
-			rvrt = "!f() { git commit -m \"⏪ REVERT: $@\"; }; f"
-			# RELEASE.
-			rlz = "!f() { git commit -m \"🚀 RELEASE: $@\"; }; f"
+	# FEAT.
+	feat = "!f() { git commit -m \"✨ feat: $@\"; }; f"
+	# FIX.
+	fx = "!f() { git commit -m \"👌 fix: $@\"; }; f"
+	# DOCS.
+	doc = "!f() { git commit -m \"📖 docs: $@\"; }; f"
+	# STYLE
+	style = "!f() { git commit -m \"💄 style: $@\"; }; f"
+	# REFACTOR
+	refactor = "!f() { git commit -m \"🔥 refactor: $@\"; }; f"
+	# PERF
+	perf = "!f() { git commit -m \"📈 perf: $@\"; }; f"
+	# TEST
+	tst = "!f() { git commit -m \"✅ test: $@\"; }; f"
+	# BUILD
+	build = "!f() { git commit -m \"📦 build: $@\"; }; f"
+	# CI
+	ci = "!f() { git commit -m \"💚 ci: $@\"; }; f"
+	# LOCALIZE
+	localize = "!f() { git commit -m \"👽 localize: $@\"; }; f"
+	# REVERT
+	rvrt = "!f() { git commit -m \"⏪ revert: $@\"; }; f"
+	# RELEASE.
+	rlz = "!f() { git commit -m \"🚀 release: $@\"; }; f"
 
     	# Show aliases.
     	alias = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
