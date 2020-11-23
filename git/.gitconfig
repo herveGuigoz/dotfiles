@@ -3,8 +3,8 @@
 # (for Windows, you'll have to create ".bat" or ".cmd" files in your %PATH%)
 
 [user]
-	email = herve.guigoz@gmail.com
-	name = herveGuigoz
+			email = herve.guigoz@gmail.com
+			name = herveGuigoz
 
 [color]
     	# Enable colors for all output from git
@@ -14,6 +14,9 @@
 [push]
     	# Avoid writing "-u" everytime you push, it will set the upstream if no refspec is given
     	default = current
+
+[pull]
+			rebase = true
 
 [core]
     	editor = vim
@@ -39,39 +42,6 @@
     	pager = less -X -F
 
 [alias]
-    	# Shortcuts for some actions
-    	co = checkout
-    	cob = checkout -b
-    	c = commit
-    	co = commit --amend
-    	cam = commit -am
-    	br = branch
-    	l = log
-    	st = status
-    
-    	# Push head.
-    	pushead = !git push origin HEAD
-    	p = !git pushead
-    	pf = !git pushead -f
-    
-    	# Add fix.
-    	fix = !git add --all && git commit -am "Fix." && git pushead
-    	f = !git fix
-    
-    	# Fix last commit.
-    	fixup = !git add --all && git commit --amend -C HEAD
-    	fixnow = !git fixup && git pushead -f
-    	fu = !git fixup
-    	fn = !git fixnow
-    
-    	# Clean merged branch.
-    	deletedone = !git branch --merged | grep -v \"\\*\" | grep -v master | xargs -n 1 git branch -d
-    	dd = !git deletedone
-    
-    	# Stash.
-    	sc = !git stash clear
-    	sl = !git stash list --pretty=format:'%Cred%h%Creset -%C(yellow)(%C(bold magenta)%gd%C(yellow))%Creset %<(70,trunc)%s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
-    
     	# Tools to save time
     	f = fetch --all            # Fetches all your repositories
     	fp = fetch --all --prune   # Fetches all your repositories and removes refs that do not exist anymore remotely
@@ -92,7 +62,7 @@
     	# Shows all commits formatted like this:
     	# [0a1b2c3] Commit Title  Commit Description
     	# This is very useful if you want to create nice changelogs in your releases, like in Github
-    	log-commits = log --pretty=format:'[%h] %s'
+    	changelogs = log --pretty=format:'[%h] %s'
     
     	# Display all local branches in the order of their last commit, allowing to see what you worked on when.
     	lb = for-each-ref --sort='-authordate:iso8601' --format=' %(color:green)%(authordate:iso8601)%09%(color:white)%(refname:short)' refs/heads
@@ -108,30 +78,19 @@
     	# Tested and approved! For a very often rebased repo, turned it from 4.8GB to 350MB... 😉
     	gcall = -c gc.reflogExpire=0 -c gc.reflogExpireUnreachable=0 -c gc.rerereresolved=0 -c gc.rerereunresolved=0 -c gc.pruneExpire=now gc --aggressive
       
-	# FEAT.
-	feat = "!f() { git commit -m \"✨ feat: $@\"; }; f"
-	# FIX.
-	fx = "!f() { git commit -m \"👌 fix: $@\"; }; f"
-	# DOCS.
-	doc = "!f() { git commit -m \"📖 docs: $@\"; }; f"
-	# STYLE
-	style = "!f() { git commit -m \"💄 style: $@\"; }; f"
-	# REFACTOR
-	refactor = "!f() { git commit -m \"🔥 refactor: $@\"; }; f"
-	# PERF
-	perf = "!f() { git commit -m \"📈 perf: $@\"; }; f"
-	# TEST
-	tst = "!f() { git commit -m \"✅ test: $@\"; }; f"
-	# BUILD
-	build = "!f() { git commit -m \"📦 build: $@\"; }; f"
-	# CI
-	ci = "!f() { git commit -m \"💚 ci: $@\"; }; f"
-	# LOCALIZE
-	localize = "!f() { git commit -m \"👽 localize: $@\"; }; f"
-	# REVERT
-	rvrt = "!f() { git commit -m \"⏪ revert: $@\"; }; f"
-	# RELEASE.
-	rlz = "!f() { git commit -m \"🚀 release: $@\"; }; f"
+			# Commit message types
+			cfeat = "!f() { git commit -m \"✨ feat: $@\"; }; f"				 # FEAT.
+			cfix = "!f() { git commit -m \"👌 fix: $@\"; }; f" 						# FIX.
+			cdoc = "!f() { git commit -m \"📖 docs: $@\"; }; f" 					# DOCS.
+			cstyle = "!f() { git commit -m \"💄 style: $@\"; }; f" 			# STYLE
+			crefactor = "!f() { git commit -m \"🔥 refactor: $@\"; }; f" # REFACTOR
+			cperf = "!f() { git commit -m \"📈 perf: $@\"; }; f" 				# PERF
+			ctest = "!f() { git commit -m \"✅ test: $@\"; }; f"					 # TEST
+			cbuild = "!f() { git commit -m \"📦 build: $@\"; }; f"				# BUILD
+			cci = "!f() { git commit -m \"💚 ci: $@\"; }; f"							# CI
+			clocalize = "!f() { git commit -m \"👽 localize: $@\"; }; f" # LOCALIZE
+			crvrt = "!f() { git commit -m \"⏪ revert: $@\"; }; f"			 # REVERT
+			crlz = "!f() { git commit -m \"🚀 release: $@\"; }; f"				# RELEASE.
 
     	# Show aliases.
     	alias = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
