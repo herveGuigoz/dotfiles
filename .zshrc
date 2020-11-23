@@ -55,20 +55,6 @@ alias gmaster="git checkout master"
 alias gca="git commit --amend"
 
 alias changelogs='git log --pretty=format:"[%h] %s"'
-      
-# Commit Types
-alias gfeat="!f() { git commit -m \"✨ feat: $@\"; }; f"
-alias gfx="!f() { git commit -m \"👌 fix: $@\"; }; f"
-alias gdoc="!f() { git commit -m \"📖 docs: $@\"; }; f"
-alias gstyle="!f() { git commit -m \"💄 style: $@\"; }; f"
-alias grefactor="!f() { git commit -m \"🔥 refactor: $@\"; }; f"
-alias gperf="!f() { git commit -m \"📈 perf: $@\"; }; f"
-alias gtst="!f() { git commit -m \"✅ test: $@\"; }; f"
-alias gbuild="!f() { git commit -m \"📦 build: $@\"; }; f"
-alias gci="!f() { git commit -m \"💚 ci: $@\"; }; f"
-alias glocalize="!f() { git commit -m \"👽 localize: $@\"; }; f"
-alias grvrt="!f() { git commit -m \"⏪ revert: $@\"; }; f"
-alias grlz="!f() { git commit -m \"🚀 release: $@\"; }; f"
 
 alias ct='sh ~/dotfiles/git/commit_types'
 
