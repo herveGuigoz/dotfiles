@@ -29,6 +29,7 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ~="cd ~"
+alias dev="cd ~/dev"
 
 alias chmox='chmod -x'
 alias c="clear"
