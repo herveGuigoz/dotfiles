@@ -3,6 +3,8 @@ cd "$(dirname "$0")" || exit 5
 git pull
 
 function doIt() {
+  chmod +x ~/dotfiles/git/commit-msg
+  
   if [ ! -d ~/code ]; then
     mkdir ~/code
   fi
