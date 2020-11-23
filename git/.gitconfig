@@ -79,18 +79,18 @@
     	gcall = -c gc.reflogExpire=0 -c gc.reflogExpireUnreachable=0 -c gc.rerereresolved=0 -c gc.rerereunresolved=0 -c gc.pruneExpire=now gc --aggressive
       
 			# Commit message types
-			cfeat = "!f() { git commit -m \"✨ feat: $@\"; }; f"				 # FEAT.
-			cfix = "!f() { git commit -m \"👌 fix: $@\"; }; f" 						# FIX.
-			cdoc = "!f() { git commit -m \"📖 docs: $@\"; }; f" 					# DOCS.
-			cstyle = "!f() { git commit -m \"💄 style: $@\"; }; f" 			# STYLE
+			cfeat = "!f() { git commit -m \"✨ feature: $@\"; }; f"		  # FEAT.
+			cfix = "!f() { git commit -m \"👌 fix: $@\"; }; f" 					 # FIX.
+			cdoc = "!f() { git commit -m \"📖 docs: $@\"; }; f" 				 # DOCS.
+			cstyle = "!f() { git commit -m \"💄 style: $@\"; }; f" 			 # STYLE
 			crefactor = "!f() { git commit -m \"🔥 refactor: $@\"; }; f" # REFACTOR
-			cperf = "!f() { git commit -m \"📈 perf: $@\"; }; f" 				# PERF
-			ctest = "!f() { git commit -m \"✅ test: $@\"; }; f"					 # TEST
-			cbuild = "!f() { git commit -m \"📦 build: $@\"; }; f"				# BUILD
-			cci = "!f() { git commit -m \"💚 ci: $@\"; }; f"							# CI
+			cperf = "!f() { git commit -m \"📈 perf: $@\"; }; f" 				 # PERF
+			ctest = "!f() { git commit -m \"✅ test: $@\"; }; f"					# TEST
+			cbuild = "!f() { git commit -m \"📦 build: $@\"; }; f"			 # BUILD
+			cci = "!f() { git commit -m \"💚 ci: $@\"; }; f"						 # CI
 			clocalize = "!f() { git commit -m \"👽 localize: $@\"; }; f" # LOCALIZE
-			crvrt = "!f() { git commit -m \"⏪ revert: $@\"; }; f"			 # REVERT
-			crlz = "!f() { git commit -m \"🚀 release: $@\"; }; f"				# RELEASE.
+			crvrt = "!f() { git commit -m \"⏪ revert: $@\"; }; f"			  # REVERT
+			crlz = "!f() { git commit -m \"🚀 release: $@\"; }; f"			 # RELEASE.
 
     	# Show aliases.
-    	alias = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
+    	al = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
