@@ -1,9 +1,6 @@
 #!/bin/sh
 
-GREEN=$'\e[1;32m'
-BLUE=$'\e[1;34m'
-YEL=$'\e[1;33m'
-END=$'\e[0m'
+# check if message is valid
 
 array=(
     'feat::A new feature'
@@ -19,6 +16,18 @@ array=(
     'revert::Reverts a previous commit'
     'release::A new release'
 )
+
+types=''
+
+RED=$'\e[31m'
+GREEN=$'\e[1;32m'
+BLUE=$'\e[1;34m'
+YEL=$'\e[1;33m'
+END=$'\e[0m'
+
+errorPrinter() {
+    printf "%s\n" "${RED}${1}${END}"
+}
 
 infoPrinter() {
     printf "%s\n" "${BLUE}${1}${END} ${GREEN}${2}${END}"
@@ -45,11 +54,37 @@ printSubjectInfo() {
     printf "%s\n" "   Brief summary of the change in present tense. Not capitalized. No period at the end."
 }
 
-infoPrinter "correct format: " "<type>(<scope>): <subject>"
-infoPrinter "exemple: " "docs: Update README with instal instructions"
-echo ''
-printTypesList
-echo ''
-printScopeInfo
-echo ''
-printSubjectInfo
+printError() {
+    errorPrinter 'Invalid git commit message'
+    echo ''
+    infoPrinter "correct format: " "<type>(<scope>): <subject>"
+    infoPrinter "exemple: " "docs: Update README with instal instructions"
+    echo ''
+    printTypesList
+    echo ''
+    printScopeInfo
+    echo ''
+    printSubjectInfo
+}
+
+# Populate commit type regex's groups
+for index in "${array[@]}" ; do
+    KEY="${index%%::*}"
+    # if empty
+    if [ -z "$types" ]; then
+        # initialize list with first key
+        types="$KEY"
+    else
+        # append next key
+        types="$types|$KEY"
+    fi
+done
+
+REGEX="($types){1}(:|\([a-zA-Z0-9_]*\):){1}(.*)$";
+
+echo $REGEX
+
+if ! [[ $1 =~ $REGEX ]]; then
+    printError
+    exit 1
+fi
