@@ -93,7 +93,7 @@ print_error() {
 
 print_info() {
     # Print output in purple
-    printf "\n\e[0;35m $1\e[0m\n\n"
+    printf "\e[0;35m  [!] $1\e[0m\n"
 }
 
 print_question() {
@@ -127,8 +127,9 @@ main() {
         print_success "Brew installed."
         ask_for_confirmation "do you want to cask all package from brew-cask.sh ?"
         if answer_is_yes; then
-            print_info "Installing app..."
+            print_info "Installing applications..."
             sh ./brew-cask.sh
+            print_success "Applications installed."
         fi
     else
         print_success "Brew already installed."
@@ -149,11 +150,12 @@ main() {
         ask_for_confirmation "do you want to override .gitconfig ?"
         if answer_is_yes; then
             cp ./git/.gitconfig ~/.gitconfig
+            print_success ".gitconfig is up to date."
         else
             print_info 'gitconfig is omitted'
         fi
     else
-        print_error './git/.gitconfig file doesnt exist, gitconfig is omitted'
+        print_error './git/.gitconfig file doesnt exist, gitconfig is omitted.'
     fi
     if [ -f ./git/commit_types ]; then
         chmod -x ./git/commit_types
@@ -167,13 +169,23 @@ main() {
             for ext in $extensions; do
                 code --install-extension "$ext" --force
             done
+            print_success 'vs code extensions installed.'
         else
-            print_info 'vs code extensions is omitted'
+            print_info 'vs code extensions is omitted.'
         fi
     else
-        print_error './ide/vs-code/extensions.txt file doesnt exist, vs code extensions is omitted'
+        print_error './ide/vs-code/extensions.txt file doesnt exist, vs code extensions is omitted.'
+    fi
+
+    # Zsh
+    if [ -f ./.zshrc ]; then
+        ask_for_confirmation "do you want to update .zsh config ?"
+        if answer_is_yes; then
+            cp ./.zshrc ~/.zshrc
+            source ~/.zshrc
+            print_success '.zsh configuration file is up to date.'
+        fi
     fi
 }
 
 main
-source ~/.bash_profile

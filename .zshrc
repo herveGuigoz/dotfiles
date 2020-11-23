@@ -10,118 +10,101 @@ export ZSH="/Users/herveguigoz/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-autosuggestions flutter alias-finder docker)
 
 source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-# zsh
+################################################
+# BASH                                         #
+################################################
+
+alias ..="cd .."
+alias cd..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~"
+
+alias chmox='chmod -x'
+alias c="clear"
+
+################################################
+# TYPOS                                        #
+################################################
+
+alias brwe='brew'
+alias gti="git"
+
+################################################
+# ZSH                                          #
+################################################
+
 alias zshconfig="vim ~/.zshrc"
 alias sourcezsh="source ~/.zshrc"
 
-# Get current ip
-alias ip='ipconfig getifaddr en0'
+################################################
+# GIT                                          #
+################################################
 
-# Common
-alias c="clear"
+alias gmaster="git checkout master"
+alias gca="git commit --amend"
 
-# Prevent common error
-alias gti="git"
+alias changelogs='git log --pretty=format:"[%h] %s"'
+      
+# Commit Types
+alias gfeat="!f() { git commit -m \"✨ feat: $@\"; }; f"
+alias gfx="!f() { git commit -m \"👌 fix: $@\"; }; f"
+alias gdoc="!f() { git commit -m \"📖 docs: $@\"; }; f"
+alias gstyle="!f() { git commit -m \"💄 style: $@\"; }; f"
+alias grefactor="!f() { git commit -m \"🔥 refactor: $@\"; }; f"
+alias gperf="!f() { git commit -m \"📈 perf: $@\"; }; f"
+alias gtst="!f() { git commit -m \"✅ test: $@\"; }; f"
+alias gbuild="!f() { git commit -m \"📦 build: $@\"; }; f"
+alias gci="!f() { git commit -m \"💚 ci: $@\"; }; f"
+alias glocalize="!f() { git commit -m \"👽 localize: $@\"; }; f"
+alias grvrt="!f() { git commit -m \"⏪ revert: $@\"; }; f"
+alias grlz="!f() { git commit -m \"🚀 release: $@\"; }; f"
 
-# Commit type
 alias ct='sh ~/dotfiles/git/commit_types'
 
-# Docker compose
+################################################
+# DOCKER                                       #
+################################################
+
+alias docker-rm-all='docker rm -vf $(docker ps -aq)'
 alias dc="docker-compose"
 alias dcrmc="docker-compose exec php bin/console c:c"
 alias rmc="rm -rf var/cache"
 
-# Aliases
+################################################
+# FLUTTER                                      #
+################################################
+
+alias flutter="fvm flutter"
+
+################################################
+# SHORTCUTS                                    #
+################################################
+
+alias g="git"
+alias v="vim"
+
+################################################
+# MISC                                         #
+################################################
+
+alias ip='ipconfig getifaddr en0'
 alias al="alias"
 alias af="alias-finder"
 
-# Use flutter Everywhere
-export PATH="$PATH:`pwd`/flutter/bin"
-
 # Use programs from brew (like php) before default one.
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+
+# Use flutter Everywhere
+# export PATH="$PATH":"$HOME/.pub-cache/bin:/Users/herveguigoz/fvm/default/bin"
 
