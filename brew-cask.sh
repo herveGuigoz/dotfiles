@@ -40,6 +40,7 @@ brew cask install lulu
 brew cask install inkscape
 brew cask install discord
 brew install wifi-password
+brew install imagemagick
 
 # Remove outdated versions from the cellar
 brew cleanup
