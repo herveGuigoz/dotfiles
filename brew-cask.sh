@@ -29,6 +29,7 @@ brew install lcov
 
 # browsers
 brew cask install brave-browser
+brew install --cask google-chrome
 
 # Misc
 brew install scrcpy
