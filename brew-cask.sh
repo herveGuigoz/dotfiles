@@ -20,6 +20,7 @@ brew install dart
 pub global activate fvm
 brew install node
 brew install yarn
+brew install php
 brew install composer
 brew cask install android-platform-tools
 brew cask install android-studio
