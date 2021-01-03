@@ -33,6 +33,7 @@ brew cask install brave-browser
 brew install --cask google-chrome
 
 # Misc
+brew install --cask openoffice
 brew install scrcpy
 brew cask install spotify
 brew cask install keepassxc
