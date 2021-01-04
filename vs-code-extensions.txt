@@ -6,3 +6,4 @@ octref.vetur
 gruntfuggly.todo-tree
 yzhang.markdown-all-in-one
 shd101wyy.markdown-preview-enhanced
+aaron-bond.better-comments
