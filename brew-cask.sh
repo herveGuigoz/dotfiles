@@ -44,6 +44,7 @@ brew cask install inkscape
 brew cask install discord
 brew install wifi-password
 brew install imagemagick
+brew cask install clean-me
 
 # Remove outdated versions from the cellar
 brew cleanup
