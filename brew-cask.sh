@@ -32,6 +32,10 @@ brew install lcov
 brew cask install brave-browser
 brew install --cask google-chrome
 
+# https://github.com/fwartner/homebrew-mac-cleanup
+brew tap fwartner/mac-cleanup
+brew install mac-cleanup
+
 # Misc
 brew install --cask openoffice
 brew install scrcpy
