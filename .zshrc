@@ -91,7 +91,3 @@ alias af="alias-finder"
 
 # Use programs from brew (like php) before default one.
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
-
-# Use flutter Everywhere
-# export PATH="$PATH":"$HOME/.pub-cache/bin:/Users/herveguigoz/fvm/default/bin"
-
