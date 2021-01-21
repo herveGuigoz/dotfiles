@@ -72,7 +72,7 @@ alias rmc="rm -rf var/cache"
 # FLUTTER                                      #
 ################################################
 
-alias flutter="fvm flutter"
+export PATH="$PATH:/Users/herveguigoz/fvm/default/bin"
 
 ################################################
 # SHORTCUTS                                    #
