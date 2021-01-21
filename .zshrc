@@ -72,7 +72,7 @@ alias rmc="rm -rf var/cache"
 # FLUTTER                                      #
 ################################################
 
-export PATH="$PATH:/Users/herveguigoz/fvm/default/bin"
+export PATH="$PATH:/Users/herveguigoz/fvm/default/bin:/Users/herveguigoz/.pub-cache/bin"
 
 ################################################
 # SHORTCUTS                                    #
