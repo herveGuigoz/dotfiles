@@ -148,11 +148,7 @@ install_zsh-autosuggestions() {
 }
 
 update-vscode-extension() {
-    sc -c "~/dotfiles/ide/vs-code/install-vscode-extensions.sh"
-    # comm -23 \
-    #   <(sort ~/dotfiles/ide/vs-code/vs-code-extensions.txt) \
-    #   <(code --list-extensions) |
-    #   xargs -I % sh -c 'code --install-extension % --force'
+    sh -c "bash ~/dotfiles/ide/vs-code/install-vscode-extensions.sh"
 }
 
 update-zshrc-config() {
@@ -224,15 +220,11 @@ main() {
 
     # Vs Code Extensions
     if cmd_exists code; then
-        if [ -f ~/dotfiles/ide/vs-code/vs-code-extensions.txt ]; then
-            ask_for_confirmation "do you want to install or update vs code extensions present in /ide/vs-code/vs-code-extensions.txt ?"
-            if answer_is_yes; then
-                execute update-vscode-extension "vs code extensions installation."
-            else
-                print_info 'vs code extensions is omitted.'
-            fi
+        ask_for_confirmation "do you want to install or update vs code extensions present in /ide/vs-code/vs-code-extensions.txt ?"
+        if answer_is_yes; then
+            execute update-vscode-extension "vs code extensions installation."
         else
-            print_error './ide/vs-code/extensions.txt file doesnt exist, vs code extensions is omitted.'
+            print_info 'vs code extensions is omitted.'
         fi
     fi
     
