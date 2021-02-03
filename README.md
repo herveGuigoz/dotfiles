@@ -1,4 +1,12 @@
-inspired by https://github.com/StefanScherer/dotfiles && https://github.com/paulirish/dotfiles
+# Dotfiles
+  - [Installation](#installation)
+  - [Applications](#applications)
+    - [dev](#dev)
+    - [Browsers](#browsers)
+    - [Utils](#utils)
+    - [Misc](#misc)
+  - [Alias](#alias)
+  - [Helpful commands](#helpful-commands)
 
 ## Installation
 
@@ -11,7 +19,54 @@ cd ~/dotfiles && bash sync.sh
 ```
 
 ## Applications
-- [homebrew-mac-cleanup](https://github.com/fwartner/homebrew-mac-cleanup)
+
+### dev
+
+- git
+- Dart
+- android-platform-tools
+- android-studio
+- docker
+- insomnia
+- phpstorm
+- visual-studio-code
+- composer
+- go
+- mkcert
+- node
+- lcov
+- php
+- scrcpy
+- yarn
+
+### Browsers
+
+- brave-browser
+- firefox
+- google-chrome
+
+### Utils
+
+- ffmpeg
+- zsh-autosuggestions
+- imagemagick
+- thefuck
+- wifi-password
+
+### Misc
+
+- discord
+- microsoft-teams
+- spotify
+- openoffice
+- lulu
+- keepassxc
+- inkscape
+- appcleaner
+- clean-me
+- iterm2
+- [mac-cleanup](https://github.com/fwartner/homebrew-mac-cleanup)
+- windscribe
 
 ## Alias
 
@@ -66,17 +121,17 @@ alias dcrmc="docker-compose exec php bin/console c:c"
 alias rmc="rm -rf var/cache"
 
 ################################################
-# FLUTTER                                      #
-################################################
-
-alias flutter="fvm flutter"
-
-################################################
 # SHORTCUTS                                    #
 ################################################
 
 alias g="git"
 alias v="vim"
+
+################################################
+# MAC CLEANUP                                  #
+################################################
+
+alias mac-cleanup="/usr/local/opt/mac-cleanup/bin/mac-cleanup"
 
 ################################################
 # MISC                                         #
