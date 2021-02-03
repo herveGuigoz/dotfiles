@@ -6,6 +6,7 @@
     - [Utils](#utils)
     - [Misc](#misc)
   - [Alias](#alias)
+  - [vscode extensions](#vscode-extensions)
   - [Helpful commands](#helpful-commands)
 
 ## Installation
@@ -141,6 +142,23 @@ alias ip='ipconfig getifaddr en0'
 alias al="alias"
 alias af="alias-finder"
 ```
+
+## vscode extensions
+
+- [One Dark Pro Theme](https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme)
+- [Dart](https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code)
+- [Flutter](https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter)
+- [Dart Data Class Generator](https://marketplace.visualstudio.com/items?itemName=BendixMa.dart-data-class-generator)
+- [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur)
+- [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
+- [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
+- [Better Comments](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
+- [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)
+- [Markdown Preview Mermaid Support](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid)
+- [Mermaid Markdown Syntax Highlighting](https://marketplace.visualstudio.com/items?itemName=bpruitt-goddard.mermaid-markdown-syntax-highlighting)
+- [Freezed](https://marketplace.visualstudio.com/items?itemName=blaxou.freezed)
+- [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
+- [Twig](https://marketplace.visualstudio.com/items?itemName=whatwedo.twig)
 
 ## Helpful commands
 
