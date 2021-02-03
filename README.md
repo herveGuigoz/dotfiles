@@ -7,8 +7,11 @@ inspired by https://github.com/StefanScherer/dotfiles && https://github.com/paul
 cd ~/ && git clone https://github.com/herveGuigoz/dotfiles.git
 
 # Run installation
-cd ~/dotfiles && sh sync.sh
+cd ~/dotfiles && bash sync.sh
 ```
+
+## Applications
+- [homebrew-mac-cleanup](https://github.com/fwartner/homebrew-mac-cleanup)
 
 ## Alias
 

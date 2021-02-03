@@ -1,8 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/herveguigoz/.oh-my-zsh"
+export ZSH="/Users/$USER/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -72,7 +73,7 @@ alias rmc="rm -rf var/cache"
 # FLUTTER                                      #
 ################################################
 
-export PATH="$PATH:/Users/herveguigoz/fvm/default/bin:/Users/herveguigoz/.pub-cache/bin"
+export PATH="$PATH:/Users/$USER/fvm/default/bin:/Users/$USER/.pub-cache/bin"
 
 ################################################
 # SHORTCUTS                                    #
@@ -82,6 +83,12 @@ alias g="git"
 alias v="vim"
 
 ################################################
+# MAC CLEANUP                                  #
+################################################
+
+alias mac-cleanup="/usr/local/opt/mac-cleanup/bin/mac-cleanup"
+
+################################################
 # MISC                                         #
 ################################################
 
@@ -89,5 +96,4 @@ alias ip='ipconfig getifaddr en0'
 alias al="alias"
 alias af="alias-finder"
 
-# Use programs from brew (like php) before default one.
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+export PATH="/usr/local/sbin:$PATH"

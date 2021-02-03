@@ -7,3 +7,8 @@ gruntfuggly.todo-tree
 yzhang.markdown-all-in-one
 shd101wyy.markdown-preview-enhanced
 aaron-bond.better-comments
+bierner.markdown-mermaid
+blaxou.freezed
+bpruitt-goddard.mermaid-markdown-syntax-highlighting
+ms-azuretools.vscode-docker
+whatwedo.twig
