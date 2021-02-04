@@ -1,5 +1,10 @@
 # Dotfiles
+- [Dotfiles](#dotfiles)
   - [Installation](#installation)
+    - [Using curl](#using-curl)
+    - [Using git](#using-git)
+  - [Usage](#usage)
+  - [Uninstall](#uninstall)
   - [Applications](#applications)
     - [dev](#dev)
     - [Browsers](#browsers)
@@ -8,15 +13,32 @@
   - [Alias](#alias)
   - [vscode extensions](#vscode-extensions)
   - [Helpful commands](#helpful-commands)
-
+  
 ## Installation
+
+### Using curl
+
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/herveGuigoz/dotfiles/master/install.sh)"
+```
+
+### Using git
 
 ```bash
 # Clone dotfiles
-cd ~/ && git clone https://github.com/herveGuigoz/dotfiles.git
+cd ~/ && git clone https://github.com/herveGuigoz/dotfiles.git && cd ~/dotfiles
+```
 
-# Run installation
+
+## Usage
+```bash
 cd ~/dotfiles && bash sync.sh
+```
+
+## Uninstall
+
+```bash
+bash ~/dotfiles/install.sh uninstall
 ```
 
 ## Applications
