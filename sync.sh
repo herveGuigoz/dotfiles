@@ -46,7 +46,16 @@ update-zshrc-config() {
 }
 
 update-gitconfig() {
+    print_question '[user] email: '
+    read email
+    sed -i -e "s/email = .*/email = $email/" ./git/.gitconfig
+
+    print_question '[user] name: '
+    read name
+    sed -i -e "s/name = .*/name = $name/" ./git/.gitconfig
+
     cp ./git/.gitconfig ~/.gitconfig
+    rm ./git/.gitconfig-e
 }
 
 
