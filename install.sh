@@ -76,9 +76,11 @@ function install() {
       print_info "Cloning repository"
       execute clone-dotfiles "clonning dotfiles to ~/dotfiles"
     else
-      ask_for_confirmation 'git not installed. Would you like to install homebrew and git ?'
+      ask_for_confirmation 'git not installed. Would you like git via homebrew ?'
       if answer_is_yes; then
-        execute install-homebrew "homebrew installation"
+        if test ! $(which brew); then
+            execute install-homebrew "homebrew installation"
+        fi
         execute install-git "Git installation"
         execute clone-dotfiles "clonning dotfiles to ~/dotfiles"
       fi
