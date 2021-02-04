@@ -64,9 +64,11 @@ main() {
     if test ! $(which brew); then
         print_info "Installing Brew..."
         execute install-homebrew "Brew installed."
-        ask_for_confirmation "do you want to install all packages ?"
+        ask_for_confirmation "do you want to install all brew packages ?"
         if answer_is_yes; then
-            execute install_brew_packages "Applications installed."
+            execute brew_tap_install "brew taps installed"
+            execute brew_packages_install 'brew packages installed'
+            execute brew_cask_install 'brew casks installed'
         fi
     else
         print_success "Brew already installed."
