@@ -72,12 +72,12 @@ main() {
     # Check for Homebrew to be present, install if it's missing
     if test ! $(which brew); then
         print_info "Installing Brew..."
-        execute install-homebrew "Brew installed."
+        execute install-homebrew "Brew installation"
         ask_for_confirmation "do you want to install all brew packages ?"
         if answer_is_yes; then
-            execute brew_tap_install "brew taps installed"
-            execute brew_packages_install 'brew packages installed'
-            execute brew_cask_install 'brew casks installed'
+            execute brew_tap_install "brew taps installation"
+            execute brew_packages_install 'brew packages installation'
+            execute brew_cask_install 'brew casks installation'
         fi
     else
         print_success "Brew already installed."
@@ -90,15 +90,15 @@ main() {
         fi
         ask_for_confirmation "Check for new taps from /homebrew/brew-tap.txt and install them ?"
         if answer_is_yes; then
-            execute brew_tap_install "brew taps installed"
+            execute brew_tap_install "brew taps installation"
         fi
         ask_for_confirmation "Check for new package from /homebrew/brew.txt and install them ?"
         if answer_is_yes; then
-            execute brew_packages_install 'brew packages installed'
+            execute brew_packages_install 'brew packages installation'
         fi
         ask_for_confirmation "Check for new casks from /homebrew/brew-cask.txt and install them ?"
         if answer_is_yes; then
-            execute brew_cask_install 'brew casks installed'
+            execute brew_cask_install 'brew casks installation'
         fi
         print_success "Brew is up to date."
     fi
@@ -107,7 +107,7 @@ main() {
     if [ -f ~/dotfiles/git/.gitconfig ] && [ -f ~/.gitconfig ]; then
         ask_for_confirmation "do you want to override .gitconfig ?"
         if answer_is_yes; then
-            execute update-gitconfig ".gitconfig is up to date."
+            execute update-gitconfig ".gitconfig update."
         else
             print_info 'gitconfig is omitted'
         fi
@@ -133,20 +133,20 @@ main() {
         if ! [ -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ]; then
             ask_for_confirmation "Do you want to install zsh-autosuggestions ?"
             if answer_is_yes; then
-                execute install_zsh-autosuggestions "zsh-autosuggestions installed"
+                execute install_zsh-autosuggestions "zsh-autosuggestions installation"
             fi
         fi
         ask_for_confirmation "do you want to update .zshrc config ?"
         if answer_is_yes; then
-            execute update-zshrc-config ".zsh configuration file is up to date."
+            execute update-zshrc-config ".zsh configuration file update."
         else
             print_info '.zshrc update is omitted.'
         fi
     else
         ask_for_confirmation "Do you want to install ohmyzsh with zsh-autosuggestions?"
         if answer_is_yes; then
-            execute install-ohmyzsh "ohmyzsh installed"
-            execute install_zsh-autosuggestions "zsh-autosuggestions installed"
+            execute install-ohmyzsh "ohmyzsh installation"
+            execute install_zsh-autosuggestions "zsh-autosuggestions installation"
         fi
     fi
 
