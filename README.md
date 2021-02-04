@@ -154,6 +154,7 @@ alias v="vim"
 # MAC CLEANUP                                  #
 ################################################
 
+alias dotfiles-sync="bash ~/dotfiles/sync.sh"
 alias mac-cleanup="/usr/local/opt/mac-cleanup/bin/mac-cleanup"
 
 ################################################
