@@ -78,6 +78,7 @@ bash ~/dotfiles/install.sh uninstall
 
 ### Misc
 
+- android-file-transfer
 - discord
 - microsoft-teams
 - spotify

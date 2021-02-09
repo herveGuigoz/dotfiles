@@ -1,4 +1,5 @@
 android-platform-tools
+android-file-transfer
 android-studio
 appcleaner
 clean-me
