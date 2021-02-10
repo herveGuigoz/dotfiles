@@ -1,9 +1,66 @@
 {
-  "Material route": {
-    "prefix": "route",
-    "body": [
-      "static Route<T> route<T>() {", "return MaterialPageRoute<T>(builder: (_) => ${0:element}());","}",
-    ],
-    "description": "Create static methode for matérial route"
-  } 
+	// Place your snippets for dart here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	"Material route": {
+		"prefix": "route",
+		"body": [
+			"static Route<T> route<T>() {", "return MaterialPageRoute<T>(builder: (_) => ${0:element}());","}",
+		],
+		"description": "Create static methode for matérial route"
+	},
+	"WidgetView": {
+		"prefix": "widget",
+		"body": [
+			"class ${0:element} extends StatefulWidget {",
+			"  @override",
+			"  _${0:element}Controller createState() => _${0:element}Controller();",
+			"}",
+			"class _${0:element}Controller extends State<${0:element}> {",
+			"  @override",
+			"  Widget build(BuildContext context) => _${0:element}View(this);",
+			"}",
+			"class _${0:element}View extends WidgetView<${0:element}, _${0:element}Controller> {",
+			"  const _${0:element}View(_${0:element}Controller state) : super(state);",
+			"  @override",
+			"  Widget build(BuildContext context) {",
+			"    return Container();",
+			"  }",
+			"}"
+		],
+		"description": "Create StatefulWidget with separation of concern"
+	},
+	"Codec": {
+		"prefix": "codec",
+		"body": [
+			"class ${0:element}Codec extends JsonCodec<${0:element}> {",
+			"  const ${0:element}Codec();",
+			"",
+			"  @override",
+			"  ${0:element} decode(Map<String, dynamic> value) => ${0:element}.fromJson(value);",
+			"",
+			"  @override",
+			"  Map<String, dynamic> encode(${0:element} value) => value.toJson();",
+			"}"
+		],
+		"description": "Create json codec"
+	},
+	"Freezed": {
+		"prefix": "freezed",
+		"body": [
+			"import 'package:flutter/foundation.dart';",
+			"import 'package:freezed_annotation/freezed_annotation.dart';",
+			"",
+			"part '${0:element}.freezed.dart';",
+			"",
+			"@freezed",
+			"abstract class ${0:element}  implements _$${0:element} {",
+			"  const ${0:element}._();",
+			"",
+			"  const factory ${0:element}.initial() = _Initial;",
+			"}"
+		],
+		"description": "Create json codec"
+	}
 }
