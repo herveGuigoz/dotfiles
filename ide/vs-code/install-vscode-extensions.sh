@@ -20,6 +20,12 @@ blaxou.freezed
 bpruitt-goddard.mermaid-markdown-syntax-highlighting
 ms-azuretools.vscode-docker
 whatwedo.twig
+coenraads.bracket-pair-colorizer
+streetsidesoftware.code-spell-checker
+nash.awesome-flutter-snippets
+jeroen-meijer.pubspec-assist
+marcelovelasquez.flutter-tree
+gmlewis-vscode.flutter-stylizer
 )
 
 for i in ${pkglist[@]}; do
