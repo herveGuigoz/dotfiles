@@ -189,6 +189,7 @@ alias af="alias-finder"
 - [Pubspec Assist](https://marketplace.visualstudio.com/items?itemName=jeroen-meijer.pubspec-assist)
 - [Flutter Tree](https://marketplace.visualstudio.com/items?itemName=marcelovelasquez.flutter-tree)
 - [flutter-stylizer](https://marketplace.visualstudio.com/items?itemName=gmlewis-vscode.flutter-stylizer)
+- [Flutter Intl](https://marketplace.visualstudio.com/items?itemName=localizely.flutter-intl)
 
 ## Helpful commands
 

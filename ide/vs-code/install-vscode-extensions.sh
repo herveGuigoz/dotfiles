@@ -26,6 +26,7 @@ nash.awesome-flutter-snippets
 jeroen-meijer.pubspec-assist
 marcelovelasquez.flutter-tree
 gmlewis-vscode.flutter-stylizer
+localizely.flutter-intl
 )
 
 for i in ${pkglist[@]}; do
