@@ -19,3 +19,4 @@ phpstorm
 spotify
 visual-studio-code
 windscribe
+slack
