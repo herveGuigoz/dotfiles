@@ -20,3 +20,4 @@ spotify
 visual-studio-code
 windscribe
 slack
+notion
