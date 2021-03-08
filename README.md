@@ -75,6 +75,7 @@ bash ~/dotfiles/install.sh uninstall
 - imagemagick
 - thefuck
 - wifi-password
+- notion
 
 ### Misc
 
