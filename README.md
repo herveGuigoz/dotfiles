@@ -191,6 +191,7 @@ alias af="alias-finder"
 - [Flutter Tree](https://marketplace.visualstudio.com/items?itemName=marcelovelasquez.flutter-tree)
 - [flutter-stylizer](https://marketplace.visualstudio.com/items?itemName=gmlewis-vscode.flutter-stylizer)
 - [Flutter Intl](https://marketplace.visualstudio.com/items?itemName=localizely.flutter-intl)
+- [Git supercharged](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
 
 ## Helpful commands
 
