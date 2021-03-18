@@ -27,6 +27,7 @@ jeroen-meijer.pubspec-assist
 marcelovelasquez.flutter-tree
 gmlewis-vscode.flutter-stylizer
 localizely.flutter-intl
+eamodio.gitlens
 )
 
 for i in ${pkglist[@]}; do
