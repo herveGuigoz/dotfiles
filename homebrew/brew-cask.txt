@@ -21,3 +21,4 @@ visual-studio-code
 windscribe
 slack
 notion
+figma
