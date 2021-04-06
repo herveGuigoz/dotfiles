@@ -76,6 +76,7 @@ bash ~/dotfiles/install.sh uninstall
 - thefuck
 - wifi-password
 - notion
+- gnupg (.zip encryption)
 
 ### Misc
 
