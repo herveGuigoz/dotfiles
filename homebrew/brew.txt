@@ -16,3 +16,4 @@ scrcpy
 thefuck
 wifi-password
 yarn
+gnupg
