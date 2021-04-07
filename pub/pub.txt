@@ -1,0 +1,3 @@
+riverpod_cli
+very_good_cli
+fvm
