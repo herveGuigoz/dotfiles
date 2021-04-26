@@ -22,4 +22,4 @@ windscribe
 slack
 notion
 figma
-pycharm
+pycharm-ce
