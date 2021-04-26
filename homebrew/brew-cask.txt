@@ -22,3 +22,4 @@ windscribe
 slack
 notion
 figma
+pycharm
