@@ -73,6 +73,7 @@ alias rmc="rm -rf var/cache"
 # FLUTTER                                      #
 ################################################
 
+export CHROME_EXECUTABLE="/opt/brave.com/brave/brave-browser"
 export PATH="$PATH:/Users/$USER/fvm/default/bin:/Users/$USER/.pub-cache/bin"
 
 ################################################
