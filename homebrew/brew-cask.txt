@@ -23,3 +23,4 @@ slack
 notion
 figma
 pycharm-ce
+cakebrew
