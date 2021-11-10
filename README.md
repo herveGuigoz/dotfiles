@@ -61,6 +61,7 @@ bash ~/dotfiles/install.sh uninstall
 - php
 - scrcpy
 - yarn
+- [act](https://github.com/nektos/act)
 
 ### Browsers
 
@@ -90,7 +91,6 @@ bash ~/dotfiles/install.sh uninstall
 - appcleaner
 - clean-me
 - iterm2
-- [mac-cleanup](https://github.com/fwartner/homebrew-mac-cleanup)
 - windscribe
 
 ## Alias
