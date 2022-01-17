@@ -94,3 +94,6 @@
 
     	# Show aliases.
     	al = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
+	
+[credential "https://github.com"]
+        helper = !/usr/local/bin/gh auth git-credential
