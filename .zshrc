@@ -10,10 +10,6 @@ export ZSH="/Users/$USER/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
-plugins=(git zsh-autosuggestions flutter alias-finder docker)
-
-source $ZSH/oh-my-zsh.sh
-
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -55,6 +51,14 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
+
+################################################
+# PLUGINS                                      #
+################################################
+
+plugins=(git zsh-autosuggestions flutter alias-finder docker)
+
+source $ZSH/oh-my-zsh.sh
 
 ################################################
 # BASH                                         #
