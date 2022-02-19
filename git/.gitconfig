@@ -22,7 +22,7 @@
         helper = !/usr/local/bin/gh auth git-credential
 
 [help]
-	autocorrect = 1
+	autocorrect = prompt
 
 [core]
     	editor = vim
