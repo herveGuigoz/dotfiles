@@ -3,8 +3,8 @@
 # (for Windows, you'll have to create ".bat" or ".cmd" files in your %PATH%)
 
 [user]
-			email = 
-			name = 
+	email = 
+	name = 
 
 [color]
     	# Enable colors for all output from git
@@ -16,7 +16,13 @@
     	default = current
 
 [pull]
-			rebase = true
+	rebase = true
+
+[credential "https://github.com"]
+        helper = !/usr/local/bin/gh auth git-credential
+
+[help]
+	autocorrect = 1
 
 [core]
     	editor = vim
@@ -94,6 +100,3 @@
 
     	# Show aliases.
     	al = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
-	
-[credential "https://github.com"]
-        helper = !/usr/local/bin/gh auth git-credential
