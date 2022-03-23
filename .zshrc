@@ -95,10 +95,9 @@ alias sourcezsh="source ~/.zshrc"
 
 alias gmaster="git checkout master"
 alias gca="git commit --amend"
-
 alias changelogs='git log --pretty=format:"[%h] %s"'
-
 alias ct='sh ~/dotfiles/git/commit_types'
+alias grmb="git branch --merged master | grep -v "master" | xargs git branch -D"
 
 ################################################
 # DOCKER                                       #
