@@ -42,21 +42,25 @@
 		],
 		"description": "Create json codec"
 	},
+	"part.g.dart": {
+		"prefix": "part",
+		"body": "part '$TM_FILENAME_BASE.g.dart';",
+	},
 	"Freezed": {
 		"prefix": "freezed",
 		"body": [
-			"import 'package:flutter/foundation.dart';",
 			"import 'package:freezed_annotation/freezed_annotation.dart';",
 			"",
-			"part '${0:element}.freezed.dart';",
+			"part '$TM_FILENAME_BASE.freezed.dart';",
+			"part '$TM_FILENAME_BASE.g.dart';",
 			"",
 			"@freezed",
 			"abstract class ${0:element}  implements _$${0:element} {",
-			"  const ${0:element}._();",
+			"  const factory ${0:element}() = _${0:element};",
 			"",
-			"  const factory ${0:element}.initial() = _Initial;",
-			"}"
+			"  factory ${0:element}.fromJson(Map<String, dynamic> json) => _$${0:element}FromJson(json);",
+			"}",
+			"",
 		],
-		"description": "Create json codec"
 	}
 }
